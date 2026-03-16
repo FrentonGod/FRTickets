@@ -429,7 +429,7 @@ export default function TicketPreview({ transaction, size }) {
           
           <div className="ticket-method-center">
             <div className="ticket-bold">Método de pago:</div>
-            <div>{selectedMethod || (metodo ? `${metodo.banco} (${metodo.titular})` : 'Efectivo')}</div>
+            <div>{selectedMethod || (metodo ? `${metodo.banco} (${metodo.titular})` : 'Por definir')}</div>
           </div>
 
           <div className="ticket-dashed-line"></div>

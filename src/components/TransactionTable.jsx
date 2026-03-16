@@ -232,10 +232,10 @@ export default function TransactionTable({ data, loading, query, onSelect, selec
                 <td className="money-cell">{formatMoney(row.monto)}</td>
                 <td className="date-cell">{formatDate(row.fecha_transaction)}</td>
                 <td className="col-metodo">
-                  <span className={`method-badge method-${row.metodo_id ? 'transfer' : 'cash'}`}>
+                  <span className={`method-badge method-${row.metodo_transferencia ? 'transfer' : 'pending'}`}>
                     {row.metodo_transferencia
                       ? row.metodo_transferencia.banco
-                      : 'Efectivo'}
+                      : 'Por definir'}
                   </span>
                 </td>
                 <td className="ref-cell col-ref">{row.referencia ?? '—'}</td>
