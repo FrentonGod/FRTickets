@@ -8,12 +8,10 @@ const MONTHS_ES = [
 
 function formatDateExtended(isoString) {
   if (!isoString) return { date: '—', time: '—' }
-  const dateObj = new Date(isoString)
-  if (isNaN(dateObj.getTime())) return { date: '—', time: '—' }
+  const [datePart] = isoString.split('T')
+  if (!datePart) return { date: '—', time: '—' }
   
-  const d = dateObj.getDate().toString().padStart(2, '0')
-  const m = (dateObj.getMonth() + 1).toString().padStart(2, '0')
-  const y = dateObj.getFullYear()
+  const [y, m, d] = datePart.split('-')
   
   // Usar la hora y minutos actuales
   const now = new Date()
