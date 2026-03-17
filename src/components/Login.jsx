@@ -124,6 +124,7 @@ export default function Login() {
               <input
                 type="email"
                 placeholder="tu@correo.com"
+                autoComplete='email'
                 value={email}
                 onChange={handleEmailChange}
                 onKeyDown={handleKeyDown}
@@ -154,6 +155,7 @@ export default function Login() {
               <input
                 type={showPassword ? 'text' : 'password'}
                 placeholder="••••••••"
+                autoComplete='current-password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required

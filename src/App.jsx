@@ -40,6 +40,7 @@ export default function App() {
         incentivo_premium,
         pendiente,
         total,
+        anticipo,
         alumnos!fk_transacciones_alumno ( id_alumno, nombre_alumno, grupo ),
         cursos!fk_transacciones_curso ( id_curso, nombre_curso ),
         metodo_transferencia!fk_transacciones_metodo ( id_metodo, titular, banco, numero_tarjetaclabe )

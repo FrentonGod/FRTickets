@@ -86,6 +86,7 @@ export default function TicketPreview({ transaction, size }) {
   const incentivo = transaction.incentivo_premium ?? 0
   const pendiente = transaction.pendiente ?? 0
   const total = transaction.total ?? 0
+  const anticipo = transaction.anticipo ?? 0
   
   const handlePrint = (e) => {
     e?.preventDefault()
@@ -410,7 +411,7 @@ export default function TicketPreview({ transaction, size }) {
               <tr>
                 <td></td>
                 <td><span className="ticket-bold">Anticipo / Pago:</span></td>
-                <td className="ticket-importe-cell" style={{ borderBottom: '1px solid #000' }}>{formatMoney(total - pendiente)}</td>
+                <td className="ticket-importe-cell" style={{ borderBottom: '1px solid #000' }}>{formatMoney(anticipo)}</td>
               </tr>
               <tr>
                 <td></td>
